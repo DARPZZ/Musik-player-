@@ -1,16 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.musik12.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musik12.HelloController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="260.0" layoutX="526.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="260.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9911810443607791">
+                            <color>
+                                <Color red="0.14473684132099152" green="0.005360623821616173" blue="0.005360623821616173" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.44736841320991516" green="0.08905945718288422" blue="0.08905945718288422" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fx:id="frame_image" fitHeight="250.0" fitWidth="253.0" layoutX="531.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: Green; -fx-border-width: 2px;">
+            <effect>
+                <Reflection fraction="0.22" topOpacity="0.1" />
+            </effect>
+            <image>
+                <Image url="@../../../../../../../../../Desktop/placeholder-250x250-1.png" />
+            </image>
+        </ImageView>
+        <ListView fx:id="frame_pl_view" layoutX="25.0" layoutY="315.0" prefHeight="250.0" prefWidth="230.0" style="-fx-background-color: Black; -fx-border-color: #8B0000;" />
+        <Button fx:id="button_play" layoutX="457.0" layoutY="53.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" scaleShape="false" style="-fx-background-color: Black; -fx-border-color: #8B0000;" text="PLAY" textFill="WHITE">
+            <font>
+                <Font name="Dubai Bold" size="10.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_pause" layoutX="457.0" layoutY="101.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" scaleShape="false" style="-fx-background-color: Black; -fx-border-color: #8B0000;" text="PAUSE" textFill="WHITE">
+            <font>
+                <Font name="Dubai Bold" size="10.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_stop" layoutX="457.0" layoutY="148.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" scaleShape="false" style="-fx-background-color: Black; -fx-border-color: #8B0000;" text="STOP" textFill="WHITE">
+            <font>
+                <Font name="Dubai Bold" size="10.0" />
+            </font>
+        </Button>
+        <Button fx:id="button_shuffle" layoutX="457.0" layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" scaleShape="false" style="-fx-background-color: Black; -fx-border-color: #8B0000;" text="SHUFFLE" textFill="WHITE">
+            <font>
+                <Font name="Dubai Bold" size="10.0" />
+            </font>
+        </Button>
+        <ProgressBar layoutX="25.0" layoutY="282.0" prefHeight="18.0" prefWidth="750.0" progress="0.0" />
+        <ListView fx:id="frame_pl_tracks" layoutX="257.0" layoutY="315.0" prefHeight="250.0" prefWidth="526.0" style="-fx-background-color: Black; -fx-border-color: #8B0000;" />
+    </children>
+</AnchorPane>
